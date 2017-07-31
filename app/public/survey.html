@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friend Finder - Survey</title>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+ <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+ </head>
+
+<body>
+
+<div id="panel2"><h1>The Survey</h1>
+
+<form class="aligning" name="info">
+<h2>About You</h2>
+Name (Required)<br>
+<input type="text" name="name" id="userName"><br>
+Link to Photo Image (Required)<br>
+<input type="photo" name="photo" id="userPhoto"><br>
+
+<div class="question" id="Q1">
+<h2>Question 1</h2>
+What do you like more? Tex-Mex or Sushi?
+<br>
+<select>
+<option value="0">---------------------</option>
+<option value="1">Tex-Mex</option>
+<option value="2">Mostly Tex-Mex</option>
+<option value="3">Both Equal</option>
+<option value="4">Mostly Sushi</option>
+<option value="5">Sushi</option>
+</select>
+</div>
+<div class="question" id="Q2">
+<h2>Question 2</h2>
+What professional sport do you like more? Football or Basketball?
+<br>
+<select>
+<option value="0">---------------------</option>
+<option value="1">Football</option>
+<option value="2">Mostly Football</option>
+<option value="3">Both Equal</option>
+<option value="4">Mostly Basketball</option>
+<option value="5">Basketball</option>
+</select>
+</div>
+<div class="question" id="Q3">
+<h2>Question 3</h2>
+What type of movies do you like more? Comedy or Action?
+<br>
+<select>
+<option value="0">---------------------</option>
+<option value="1">Comedy</option>
+<option value="2">Mostly Comedy</option>
+<option value="3">Both Equal</option>
+<option value="4">Mostly Action</option>
+<option value="5">Action</option>
+</select>
+</div>
+<div class="question" id="Q4">
+<h2>Question 4</h2>
+What time do you usually go to sleep at?
+<br>
+<select>
+<option value="0">---------------------</option>
+<option value="1">6pm or earlier</option>
+<option value="2">7pm-8pm</option>
+<option value="3">9pm-10pm</option>
+<option value="4">11pm-12pm</option>
+<option value="5">After midnight</option>
+</select>
+</div>
+<div class="question" id="Q5">
+<h2>Question 5</h2>
+What do you find more exciting? Video games or drinking?
+<br>
+<select>
+<option value="0">---------------------</option>
+<option value="1">Video Games</option>
+<option value="2">Mostly Video Games</option>
+<option value="3">Both Equal</option>
+<option value="4">Mostly Drinking</option>
+<option value="5">Drinking</option>
+</select>
+</div>
+<div class="question" id="Q6">
+<h2>Question 6</h2>
+What type of weather is more unbearable? Heavy Rain or Scorching Sun?
+<br>
+<select>
+<option value="0">---------------------</option>
+<option value="1">Torrential Downpore</option>
+<option value="2">Mostly Intense Rain</option>
+<option value="3">Both Equal</option>
+<option value="4">Mostly Intense Sun</option>
+<option value="5">Scorching Sun (over 100 degrees)</option>
+</select>
+</div>
+<div class="question" id="Q7">
+<h2>Question 7</h2>
+How often do you usually eat fast food?
+<br>
+<select>
+<option value="0">---------------------</option>
+<option value="1">3+ times a day</option>
+<option value="2">1-2 times a day</option>
+<option value="3">1 time in 3 days</option>
+<option value="4">1 time per week</option>
+<option value="5">Don't Eat Fast Food</option>
+</select>
+</div>
+<div class="question" id="Q8">
+<h2>Question 8</h2>
+Do you prefer doing passive activities (like seeing movies) or prefer active<br> activities (like playing tennis)?
+<br>
+<select>
+<option value="0">---------------------</option>
+<option value="1">Passive (like seeing movies)</option>
+<option value="2">Mostly Passive</option>
+<option value="3">Both Equal</option>
+<option value="4">Mostly Active</option>
+<option value="5">Active (like playing tennis)</option>
+</select>
+</div>
+<div class="question" id="Q9">
+<h2>Question 9</h2>
+Do you prefer getting information from online or newspapers?
+<br>
+<select>
+<option value="0">---------------------</option>
+<option value="1">Only Newspapers</option>
+<option value="2">Mostly Newspapers</option>
+<option value="3">Both Equal</option>
+<option value="4">Mostly Online</option>
+<option value="5">Only Online</option>
+</select>
+</div>
+<div class="question" id="Q10">
+<h2>Question 10</h2>
+Do you like being around lots of people?
+<br>
+<select>
+<option value="0">---------------------</option>
+<option value="1">Lots of People</option>
+<option value="2">Many People</option>
+<option value="3">Some People</option>
+<option value="4">Few People</option>
+<option value="5">Only One Person</option>
+</select>
+</div>
+<br>
+
+
+<button type="submit" value="Submit" id="add-user" class="stuff" data-target="#myModal">Submit the Survey!</button>
+</form>
+
+<div id="linkContainer">
+<a href="/api/friends" target="_blank">API Friends List</a><br><a href="https://github.com/rweitman/FriendFinder" target="_blank">GitHub Repo</a>
+</div>
+
+<br><br><br>
+<div class="modal-fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Your best match is...</h4>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <a href="/survey"><button type="button" class="btn btn-default" data-dismiss="modal">Take the Survey Again</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+ 
+    $("#add-user").on("click", function(event) 
+    {
+      event.preventDefault();
+      var validator = false;
+
+      if ($("#userName").val() != "" && $("#userPhoto").val() != "") {
+          validator = true;
+        }
+      
+
+        $(".question select").each(function() {
+          var value = $(this).val();
+          if (value == 0) {
+            validator = false;
+          }
+        });
+
+          if (validator) {
+            var surveyVal = [];
+            $(".question select").each(function(index) {
+                var value = $(this).val();
+                surveyVal.push(value);
+            });
+
+
+      var newUser = {
+       name: $("#userName").val().trim(),
+       photo: $("#userPhoto").val().trim(),
+       survey: surveyVal
+          };
+
+      console.log(newUser);
+
+      $.post("/api/new", newUser).done(function(data) {
+
+        console.log(data);
+
+        var matchImg = $("<img>");
+        matchImg.attr('src', data.photo);
+        matchImg.attr('width', "100px");
+        matchImg.attr('height', "100px");
+        $(".modal-body").empty();
+        $(".modal-body").html("<h2>" + data.name + "</h2>");
+        $(".modal-body").append(matchImg);
+      });
+
+      // $('#myModal').modal("show");
+     // $("#myModal").modal('toggle');
+      $("#userName").val("");
+      $("#userPhoto").val("");
+      $(".question select").each(function(index) {
+              $('.question select option').prop('selected', function() {
+                  return this.defaultSelected;
+                });
+            });
+            validator = false;
+        } else {
+          alert("Please answer all questions.");
+            // $('#myModal').modal("hide");
+    }});
+
+  </script>
+
+</body>
+ </html>
